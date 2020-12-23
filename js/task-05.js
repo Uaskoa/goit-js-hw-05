@@ -22,33 +22,29 @@ class Car {
   }
 
   turnOn() {
-    return (this.isOn = true);
+    this.isOn = true;
   }
 
   turnOff() {
     (this.isOn = false), (this.speed = 0);
-    return this.isOn, this.speed;
   }
 
   accelerate(value) {
     if (this.speed + value <= this.maxSpeed) {
       this.speed += value;
     }
-    return this.speed;
   }
 
   decelerate(value) {
     if (this.speed - value > 0) {
       this.speed -= value;
     }
-    return this.speed;
   }
 
   drive(hours) {
     if ((this.isOn = true)) {
       this.distance += hours * this.speed;
     }
-    return this.distance;
   }
 }
 
