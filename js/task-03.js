@@ -25,14 +25,14 @@ const storage = new Storage([
   "Антигравитатор",
 ]);
 
-storage.getItems();
-console.table(storage.getItems()); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор" ]
+const items = storage.getItems();
+console.table(items) // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор" ]
 
 storage.addItem("Дроид");
-console.table(storage.getItems()); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор", "Дроид" ]
+console.table(items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор", "Дроид" ]
 
 storage.removeItem("Пролонгер");
-console.table(storage.getItems()); // [ "Нанитоиды", "Железные жупи", "Антигравитатор", "Дроид" ]
+console.table(items); // [ "Нанитоиды", "Железные жупи", "Антигравитатор", "Дроид" ]
 
 
 
